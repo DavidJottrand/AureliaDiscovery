@@ -1,0 +1,12 @@
+server:
+  port: 3000
+  waitTimeInMsWhenSyncEmpty: 0
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka : false
+    fetchRegistry: false
+spring:
+  application:
+    name: AureliaDiscovery
