@@ -1,12 +1,18 @@
+spring:
+  application:
+    name: AureliaDiscovery  # Name of the app.
 server:
   port: 3000
-  waitTimeInMsWhenSyncEmpty: 0
-eureka:
+eureka: # Eureka config
   instance:
     hostname: localhost
   client:
+    # It's the server so it doesn't need to register itself.
     registerWithEureka : false
+    # This property controls whether or not the Eureka Client would fetch the registry from the Eureka Server,
+    # and since we are the only Eureka Server, there's nothing else to fetch from anybody else, so we'll set this to false.
     fetchRegistry: false
-spring:
-  application:
-    name: AureliaDiscovery
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+
+
